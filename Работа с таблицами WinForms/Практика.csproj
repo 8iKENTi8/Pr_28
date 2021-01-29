@@ -69,18 +69,24 @@
     <Compile Include="AddContact.Designer.cs">
       <DependentUpon>AddContact.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contr_hourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contr_hourse.Designer.cs">
+      <DependentUpon>Contr_hourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contr_res.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contr_res.Designer.cs">
+      <DependentUpon>Contr_res.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="Admin_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin_Form.Designer.cs">
       <DependentUpon>Admin_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ex.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ex.Designer.cs">
-      <DependentUpon>ex.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,17 +108,41 @@
     <Compile Include="User_Form.Designer.cs">
       <DependentUpon>User_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Лошади.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="владельцы.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Лошади.Designer.cs">
-      <DependentUpon>Лошади.cs</DependentUpon>
+    <Compile Include="владельцы.Designer.cs">
+      <DependentUpon>владельцы.cs</DependentUpon>
     </Compile>
-    <Compile Include="Пользователи.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Жокеи.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Пользователи.Designer.cs">
-      <DependentUpon>Пользователи.cs</DependentUpon>
+    <Compile Include="Жокеи.Designer.cs">
+      <DependentUpon>Жокеи.cs</DependentUpon>
+    </Compile>
+    <Compile Include="лошади.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="лошади.Designer.cs">
+      <DependentUpon>лошади.cs</DependentUpon>
+    </Compile>
+    <Compile Include="пользователи.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="пользователи.Designer.cs">
+      <DependentUpon>пользователи.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Результаты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Результаты.Designer.cs">
+      <DependentUpon>Результаты.cs</DependentUpon>
+    </Compile>
+    <Compile Include="состязание.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="состязание.Designer.cs">
+      <DependentUpon>состязание.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddContact.resx">
       <DependentUpon>AddContact.cs</DependentUpon>
@@ -120,8 +150,11 @@
     <EmbeddedResource Include="Admin_Form.resx">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ex.resx">
-      <DependentUpon>ex.cs</DependentUpon>
+    <EmbeddedResource Include="Contr_hourse.resx">
+      <DependentUpon>Contr_hourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contr_res.resx">
+      <DependentUpon>Contr_res.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,6 +164,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Sign_In.resx">
       <DependentUpon>Sign_In.cs</DependentUpon>
@@ -141,11 +175,23 @@
     <EmbeddedResource Include="User_Form.resx">
       <DependentUpon>User_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Лошади.resx">
-      <DependentUpon>Лошади.cs</DependentUpon>
+    <EmbeddedResource Include="владельцы.resx">
+      <DependentUpon>владельцы.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Пользователи.resx">
-      <DependentUpon>Пользователи.cs</DependentUpon>
+    <EmbeddedResource Include="Жокеи.resx">
+      <DependentUpon>Жокеи.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="лошади.resx">
+      <DependentUpon>лошади.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="пользователи.resx">
+      <DependentUpon>пользователи.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Результаты.resx">
+      <DependentUpon>Результаты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="состязание.resx">
+      <DependentUpon>состязание.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -163,6 +209,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\iconfinder_42-Detective_4715007.png" />
+    <None Include="Resources\iconfinder_zebra_3406418.png" />
+    <None Include="Resources\iconfinder_investment_3338991 %281%29.png" />
+    <None Include="Resources\iconfinder_investment_3338991.png" />
+    <None Include="Resources\iconfinder_ic_exit_to_app_48px_3669343.png" />
+    <None Include="Resources\iconfinder_Search_Icon_743893.png" />
+    <None Include="Resources\iconfinder_google_admin_5710522.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
