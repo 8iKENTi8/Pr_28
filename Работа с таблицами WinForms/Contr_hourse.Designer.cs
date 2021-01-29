@@ -32,8 +32,8 @@ namespace Работа_с_таблицами_WinForms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.table = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +55,6 @@ namespace Работа_с_таблицами_WinForms
             this.table.RowHeadersVisible = false;
             this.table.Size = new System.Drawing.Size(722, 219);
             this.table.TabIndex = 0;
-          
             // 
             // panel2
             // 
@@ -71,13 +70,6 @@ namespace Работа_с_таблицами_WinForms
             this.panel2.Size = new System.Drawing.Size(752, 285);
             this.panel2.TabIndex = 8;
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(596, 26);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(141, 20);
-            this.txtSearch.TabIndex = 2;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Работа_с_таблицами_WinForms.Properties.Resources.iconfinder_Search_Icon_743893;
@@ -87,6 +79,14 @@ namespace Работа_с_таблицами_WinForms
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(596, 26);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(141, 20);
+            this.txtSearch.TabIndex = 2;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // Contr_hourse
             // 

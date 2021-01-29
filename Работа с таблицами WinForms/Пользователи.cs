@@ -19,12 +19,13 @@ namespace Работа_с_таблицами_WinForms
             InitializeComponent();
         }
 
+        DataTable tab = new DataTable();
         private void ReloadDB()
         {
 
             DB dB = new DB();
 
-            DataTable tab = new DataTable();
+           
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
@@ -153,6 +154,16 @@ namespace Работа_с_таблицами_WinForms
         private void button1_Click(object sender, EventArgs e)
         {
             new AddContact().ShowDialog();
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                DataView data = tab.DefaultView;
+                data.RowFilter = string.Format("login like '%{0}%'", txtSearch.Text);
+                table.DataSource = data.ToTable();
+            }
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Работа_с_таблицами_WinForms
             InitializeComponent();
         }
 
+        DataTable tab = new DataTable();
         private void ReloadDB()
         {
 
