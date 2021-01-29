@@ -131,6 +131,7 @@ namespace Работа_с_таблицами_WinForms
             this.table.RowHeadersVisible = false;
             this.table.Size = new System.Drawing.Size(722, 219);
             this.table.TabIndex = 0;
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // состязание
             // 
@@ -141,6 +142,7 @@ namespace Работа_с_таблицами_WinForms
             this.Name = "состязание";
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "состязание";
+            this.Load += new System.EventHandler(this.состязание_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

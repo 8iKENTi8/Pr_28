@@ -28,8 +28,8 @@ namespace Работа_с_таблицами_WinForms
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             MySqlCommand command =
-                new MySqlCommand("SELECT `жокеи`.`name`,`жокеи`.`address`, " +
-                "`жокеи`.`age`, `жокеи`.`rating` FROM `жокеи`", dB.getConnection());
+                new MySqlCommand("SELECT `жокеи`.`Имя`,`жокеи`.`Адрес`," +
+                "`жокеи`.`Возраст`, `жокеи`.`Рейтинг` FROM `жокеи`", dB.getConnection());
 
             adapter.SelectCommand = command;
 

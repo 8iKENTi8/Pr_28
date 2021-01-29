@@ -149,5 +149,10 @@ namespace Работа_с_таблицами_WinForms
             Admin_Form form = new Admin_Form();
             form.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new AddContact().ShowDialog();
+        }
     }
 }

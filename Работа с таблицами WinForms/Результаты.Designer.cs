@@ -139,7 +139,9 @@ namespace Работа_с_таблицами_WinForms
             this.ClientSize = new System.Drawing.Size(768, 391);
             this.Controls.Add(this.panel2);
             this.Name = "Результаты";
+            this.Style = MetroFramework.MetroColorStyle.Brown;
             this.Text = "Результаты";
+            this.Load += new System.EventHandler(this.Результаты_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

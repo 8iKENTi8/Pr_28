@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Работа_с_таблицами_WinForms
 {
@@ -23,6 +24,54 @@ namespace Работа_с_таблицами_WinForms
             this.Hide();
             Admin_Form form = new Admin_Form();
             form.Show();
+        }
+
+        private void ReloadDB()
+        {
+
+            DB dB = new DB();
+
+            DataTable tab = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command =
+                new MySqlCommand("SELECT *, 'Update','Delete'" +
+                "FROM `жокеи`", dB.getConnection());
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+
+
+            table.DataSource = tab;
+
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                table[5, i] = linkCell;
+                table[5, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+            }
+
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                table[6, i] = linkCell;
+                table[6, i].Style.BackColor = Color.Tomato;
+            }
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Жокеи_Load(object sender, EventArgs e)
+        {
+            ReloadDB();
         }
     }
 }

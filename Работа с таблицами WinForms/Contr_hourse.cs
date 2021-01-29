@@ -28,9 +28,9 @@ namespace Работа_с_таблицами_WinForms
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             MySqlCommand command =
-                new MySqlCommand("SELECT `жокеи`.`name` AS 'Жокей', " +
-                "`владельцы`.`name` AS 'Владелец', `лошади`.`кличка`, " +
-                "`лошади`.`пол`,`лошади`.`возраст` FROM `лошади`,`жокеи`," +
+                new MySqlCommand("SELECT `жокеи`.`Имя` AS 'Жокей', " +
+                "`владельцы`.`name` AS 'Владелец', `лошади`.`Кличка`, " +
+                "`лошади`.`Пол`,`лошади`.`Возраст` FROM `лошади`,`жокеи`," +
                 " `владельцы` WHERE `лошади`.`id_j`=`жокеи`.`id_j` " +
                 "AND `лошади`.`id_v`=`владельцы`.`id_v`", dB.getConnection());
 

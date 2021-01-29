@@ -28,10 +28,10 @@ namespace Работа_с_таблицами_WinForms
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             MySqlCommand command =
-                new MySqlCommand("SELECT `лошади`.`кличка`, `резултаты`.`Место`, " +
+                new MySqlCommand("SELECT `лошади`.`Кличка`, `резултаты`.`Место`, " +
                 "`резултаты`.`Время_заезда`, `состязания`.`event_name` AS" +
                 " 'Название события', `состязания`.`Date_time` AS " +
-                "'Время начала события', `состязания`.`ипподром` FROM `состязания`," +
+                "'Время начала события', `состязания`.`Ипподром` FROM `состязания`," +
                 "`резултаты`,`лошади` WHERE `состязания`.`id_r`=`резултаты`.`id_r`" +
                 " AND `резултаты`.`id_l`=`лошади`.`id_l`", dB.getConnection());
 

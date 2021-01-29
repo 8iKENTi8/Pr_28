@@ -76,7 +76,7 @@ namespace Работа_с_таблицами_WinForms
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(297, 34);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Sign In";
+            this.button2.Text = "Войти";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Auth);
             // 
@@ -90,7 +90,7 @@ namespace Работа_с_таблицами_WinForms
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(297, 34);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Sign Up";
+            this.button1.Text = "Зарегистрироваться";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -173,9 +173,9 @@ namespace Работа_с_таблицами_WinForms
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.label2.Location = new System.Drawing.Point(16, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 30);
+            this.label2.Size = new System.Drawing.Size(70, 30);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Sign In";
+            this.label2.Text = "Вход";
             // 
             // panelLeft
             // 
