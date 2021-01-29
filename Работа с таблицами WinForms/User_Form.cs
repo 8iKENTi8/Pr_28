@@ -40,7 +40,7 @@ namespace Работа_с_таблицами_WinForms
         {
             SidePanel.Height = button3.Height;
             SidePanel.Top = button3.Top;
-            //mySecondCustmControl1.BringToFront();
+            contr_jokei1.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -113,6 +113,16 @@ namespace Работа_с_таблицами_WinForms.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_question_help_faq_ask_question_mark_3994396 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_question_help_faq_ask_question_mark_3994396", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Search_Icon_743893 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Search_Icon_743893", resourceCulture);

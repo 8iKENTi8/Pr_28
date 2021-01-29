@@ -7,56 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using MetroFramework.Forms;
 
 namespace Работа_с_таблицами_WinForms
 {
-    public partial class Лошади : UserControl
+    public partial class лошади : MetroForm
     {
-        public Лошади()
+        public лошади()
         {
             InitializeComponent();
         }
 
-        // Загрузка данных из БД
-        private void ReloadDB()
+        private void button3_Click(object sender, EventArgs e)
         {
-            DB dB = new DB();
-
-            DataTable tab = new DataTable();
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command =
-                new MySqlCommand("SELECT *, 'Update','Delete'" +
-                "FROM `users`", dB.getConnection());
-
-            adapter.SelectCommand = command;
-
-            adapter.Fill(tab);
-
-            table.DataSource = tab;
-
-            for (int i = 0; i < table.Rows.Count; i++)
-            {
-                DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
-
-                table[4, i] = linkCell;
-                table[4, i].Style.BackColor = Color.FromArgb(46, 169, 79);
-            }
-
-            for (int i = 0; i < table.Rows.Count; i++)
-            {
-                DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
-
-                table[5, i] = linkCell;
-                table[5, i].Style.BackColor = Color.Tomato;
-            }
-        }
-
-        private void Лошади_Load(object sender, EventArgs e)
-        {
-            ReloadDB();
+            this.Hide();
+            Admin_Form form = new Admin_Form();
+            form.Show();
         }
     }
 }

@@ -75,6 +75,12 @@
     <Compile Include="Contr_hourse.Designer.cs">
       <DependentUpon>Contr_hourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contr_jokei.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contr_jokei.Designer.cs">
+      <DependentUpon>Contr_jokei.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contr_res.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     <EmbeddedResource Include="Contr_hourse.resx">
       <DependentUpon>Contr_hourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contr_jokei.resx">
+      <DependentUpon>Contr_jokei.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contr_res.resx">
       <DependentUpon>Contr_res.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\iconfinder_question_help_faq_ask_question_mark_3994396.png" />
     <None Include="Resources\iconfinder_42-Detective_4715007.png" />
     <None Include="Resources\iconfinder_zebra_3406418.png" />
     <None Include="Resources\iconfinder_investment_3338991 %281%29.png" />

@@ -29,14 +29,14 @@ namespace Работа_с_таблицами_WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User_Form));
             this.panel1 = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contr_jokei1 = new Работа_с_таблицами_WinForms.Contr_jokei();
             this.contr_res1 = new Работа_с_таблицами_WinForms.Contr_res();
             this.contr_hourse1 = new Работа_с_таблицами_WinForms.Contr_hourse();
             this.panel1.SuspendLayout();
@@ -65,19 +65,30 @@ namespace Работа_с_таблицами_WinForms
             this.SidePanel.Size = new System.Drawing.Size(10, 54);
             this.SidePanel.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Работа_с_таблицами_WinForms.Properties.Resources.iconfinder_ic_exit_to_app_48px_3669343;
+            this.pictureBox1.Location = new System.Drawing.Point(141, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // button4
             // 
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Image = global::Работа_с_таблицами_WinForms.Properties.Resources.iconfinder_question_help_faq_ask_question_mark_3994396;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(12, 221);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(197, 54);
             this.button4.TabIndex = 4;
-            this.button4.Text = "       Delivery";
+            this.button4.Text = "       О программе";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -133,16 +144,14 @@ namespace Работа_с_таблицами_WinForms
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // contr_jokei1
             // 
-            this.pictureBox1.Image = global::Работа_с_таблицами_WinForms.Properties.Resources.iconfinder_ic_exit_to_app_48px_3669343;
-            this.pictureBox1.Location = new System.Drawing.Point(141, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.contr_jokei1.BackColor = System.Drawing.Color.White;
+            this.contr_jokei1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contr_jokei1.Location = new System.Drawing.Point(229, 60);
+            this.contr_jokei1.Name = "contr_jokei1";
+            this.contr_jokei1.Size = new System.Drawing.Size(745, 292);
+            this.contr_jokei1.TabIndex = 13;
             // 
             // contr_res1
             // 
@@ -167,6 +176,7 @@ namespace Работа_с_таблицами_WinForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 372);
+            this.Controls.Add(this.contr_jokei1);
             this.Controls.Add(this.contr_res1);
             this.Controls.Add(this.contr_hourse1);
             this.Controls.Add(this.pictureBox1);
@@ -192,5 +202,6 @@ namespace Работа_с_таблицами_WinForms
         private System.Windows.Forms.PictureBox pictureBox1;
         private Contr_hourse contr_hourse1;
         private Contr_res contr_res1;
+        private Contr_jokei contr_jokei1;
     }
 }

@@ -1,17 +1,17 @@
 ﻿
 namespace Работа_с_таблицами_WinForms
 {
-    partial class Лошади
+    partial class лошади
     {
-        /// <summary> 
-        /// Обязательная переменная конструктора.
+        /// <summary>
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Освободить все используемые ресурсы.
+        /// <summary>
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,42 +21,36 @@ namespace Работа_с_таблицами_WinForms
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором компонентов
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.table = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.table = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
-            // table
+            // pictureBox1
             // 
-            this.table.AllowUserToAddRows = false;
-            this.table.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.table.BackgroundColor = System.Drawing.Color.White;
-            this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Location = new System.Drawing.Point(15, 57);
-            this.table.Name = "table";
-            this.table.RowHeadersVisible = false;
-            this.table.Size = new System.Drawing.Size(729, 219);
-            this.table.TabIndex = 0;
+            this.pictureBox1.Image = global::Работа_с_таблицами_WinForms.Properties.Resources.iconfinder_Search_Icon_743893;
+            this.pictureBox1.Location = new System.Drawing.Point(555, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -64,15 +58,30 @@ namespace Работа_с_таблицами_WinForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.table);
-            this.panel2.Location = new System.Drawing.Point(46, 40);
+            this.panel2.Location = new System.Drawing.Point(9, 63);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(766, 324);
-            this.panel2.TabIndex = 2;
+            this.panel2.Size = new System.Drawing.Size(750, 304);
+            this.panel2.TabIndex = 7;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(169)))), ((int)(((byte)(79)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(247, 20);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(110, 29);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Home";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -87,19 +96,11 @@ namespace Работа_с_таблицами_WinForms
             this.button2.Text = "Refresh";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(555, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 20);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(596, 26);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(148, 20);
+            this.txtSearch.Size = new System.Drawing.Size(141, 20);
             this.txtSearch.TabIndex = 2;
             // 
             // button1
@@ -115,43 +116,46 @@ namespace Работа_с_таблицами_WinForms
             this.button1.Text = "New";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // table
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 30);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Лошади";
+            this.table.AllowUserToAddRows = false;
+            this.table.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.table.BackgroundColor = System.Drawing.Color.White;
+            this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table.Location = new System.Drawing.Point(15, 57);
+            this.table.Name = "table";
+            this.table.RowHeadersVisible = false;
+            this.table.Size = new System.Drawing.Size(722, 219);
+            this.table.TabIndex = 0;
             // 
-            // Лошади
+            // лошади
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(768, 391);
             this.Controls.Add(this.panel2);
-            this.Name = "Лошади";
-            this.Size = new System.Drawing.Size(858, 404);
-            this.Load += new System.EventHandler(this.Лошади_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
+            this.Name = "лошади";
+            this.Text = "лошади";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView table;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView table;
     }
 }
