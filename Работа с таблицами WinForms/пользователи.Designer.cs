@@ -103,6 +103,7 @@ namespace Работа_с_таблицами_WinForms
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(148, 20);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // button1
             // 

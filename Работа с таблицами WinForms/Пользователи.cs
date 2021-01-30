@@ -19,13 +19,13 @@ namespace Работа_с_таблицами_WinForms
             InitializeComponent();
         }
 
-        DataTable tab = new DataTable();
+        DataTable tab;
         private void ReloadDB()
         {
-
+            
             DB dB = new DB();
 
-           
+            tab = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
@@ -36,8 +36,6 @@ namespace Работа_с_таблицами_WinForms
             adapter.SelectCommand = command;
 
             adapter.Fill(tab);
-
-
 
             table.DataSource = tab;
 
@@ -153,7 +151,7 @@ namespace Работа_с_таблицами_WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new AddContact().ShowDialog();
+            new Add_us().ShowDialog();
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
@@ -163,6 +161,25 @@ namespace Работа_с_таблицами_WinForms
                 DataView data = tab.DefaultView;
                 data.RowFilter = string.Format("login like '%{0}%'", txtSearch.Text);
                 table.DataSource = data.ToTable();
+            }
+
+            if (txtSearch.Text == "")
+            {
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[4, i] = linkCell;
+                    table[4, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                }
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[5, i] = linkCell;
+                    table[5, i].Style.BackColor = Color.Tomato;
+                }
             }
         }
     }

@@ -63,11 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddContact.cs">
+    <Compile Include="Add_us.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddContact.Designer.cs">
-      <DependentUpon>AddContact.cs</DependentUpon>
+    <Compile Include="Add_us.Designer.cs">
+      <DependentUpon>Add_us.cs</DependentUpon>
     </Compile>
     <Compile Include="Contr_hourse.cs">
       <SubType>UserControl</SubType>
@@ -120,6 +120,12 @@
     <Compile Include="владельцы.Designer.cs">
       <DependentUpon>владельцы.cs</DependentUpon>
     </Compile>
+    <Compile Include="Добавление_Вл.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавление_Вл.Designer.cs">
+      <DependentUpon>Добавление_Вл.cs</DependentUpon>
+    </Compile>
     <Compile Include="Жокеи.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,8 +156,8 @@
     <Compile Include="состязание.Designer.cs">
       <DependentUpon>состязание.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddContact.resx">
-      <DependentUpon>AddContact.cs</DependentUpon>
+    <EmbeddedResource Include="Add_us.resx">
+      <DependentUpon>Add_us.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Form.resx">
       <DependentUpon>Admin_Form.cs</DependentUpon>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="владельцы.resx">
       <DependentUpon>владельцы.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавление_Вл.resx">
+      <DependentUpon>Добавление_Вл.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Жокеи.resx">
       <DependentUpon>Жокеи.cs</DependentUpon>
