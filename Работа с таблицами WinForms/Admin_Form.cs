@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Работа_с_таблицами_WinForms
 {
@@ -66,6 +65,13 @@ namespace Работа_с_таблицами_WinForms
         {
             this.Hide();
             Sign_Up form = new Sign_Up();
+            form.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Event_time form = new Event_time();
             form.Show();
         }
     }

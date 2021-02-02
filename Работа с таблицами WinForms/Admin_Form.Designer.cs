@@ -35,6 +35,7 @@ namespace Работа_с_таблицами_WinForms
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -123,6 +124,20 @@ namespace Работа_с_таблицами_WinForms
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(169)))), ((int)(((byte)(79)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(114, 298);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(345, 29);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "Время проведения событий";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Работа_с_таблицами_WinForms.Properties.Resources.iconfinder_ic_exit_to_app_48px_3669343;
@@ -139,6 +154,7 @@ namespace Работа_с_таблицами_WinForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 367);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -164,6 +180,7 @@ namespace Работа_с_таблицами_WinForms
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button7;
     }
 }
 
