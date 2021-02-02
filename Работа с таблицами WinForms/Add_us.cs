@@ -70,5 +70,6 @@ namespace Работа_с_таблицами_WinForms
             this.Hide();
 
         }
+
     }
 }

@@ -26,12 +26,13 @@ namespace Работа_с_таблицами_WinForms
             form.Show();
         }
 
+        DataTable tab;
         private void ReloadDB()
         {
 
             DB dB = new DB();
 
-            DataTable tab = new DataTable();
+            tab = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
@@ -65,6 +66,16 @@ namespace Работа_с_таблицами_WinForms
         }
 
         private void Результаты_Load(object sender, EventArgs e)
+        {
+            ReloadDB();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Add_res().ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             ReloadDB();
         }
