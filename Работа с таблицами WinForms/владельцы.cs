@@ -153,6 +153,22 @@ namespace Работа_с_таблицами_WinForms
                 DataView data = tab.DefaultView;
                 data.RowFilter = string.Format("name like '%{0}%'", txtSearch.Text);
                 table.DataSource = data.ToTable();
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[4, i] = linkCell;
+                    table[4, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                }
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[5, i] = linkCell;
+                    table[5, i].Style.BackColor = Color.Tomato;
+                }
             }
 
             if (txtSearch.Text == "")

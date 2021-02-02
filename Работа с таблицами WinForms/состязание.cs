@@ -25,13 +25,13 @@ namespace Работа_с_таблицами_WinForms
             Admin_Form form = new Admin_Form();
             form.Show();
         }
-
+        DataTable tab;
         private void ReloadDB()
         {
 
             DB dB = new DB();
 
-            DataTable tab = new DataTable();
+             tab = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
@@ -72,6 +72,61 @@ namespace Работа_с_таблицами_WinForms
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Add_sos().ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ReloadDB();
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                DataView data = tab.DefaultView;
+                data.RowFilter = string.Format("event_name like '%{0}%'", txtSearch.Text);
+                table.DataSource = data.ToTable();
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[5, i] = linkCell;
+                    table[5, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                }
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[6, i] = linkCell;
+                    table[6, i].Style.BackColor = Color.Tomato;
+                }
+            }
+
+            if (txtSearch.Text == "")
+            {
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[5, i] = linkCell;
+                    table[5, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                }
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[6, i] = linkCell;
+                    table[6, i].Style.BackColor = Color.Tomato;
+                }
+            }
         }
     }
 }
