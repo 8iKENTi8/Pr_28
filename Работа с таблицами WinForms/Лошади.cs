@@ -73,5 +73,15 @@ namespace Работа_с_таблицами_WinForms
         {
             ReloadDB();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Add_hors().ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ReloadDB();
+        }
     }
 }

@@ -93,10 +93,11 @@ namespace Работа_с_таблицами_WinForms
 
                 dB.closeConnection();
            
-
-            
-
             this.Hide();
         }
+
+       
+
+        
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Работа_с_таблицами_WinForms
 {
-    partial class Add_res
+    partial class Add_hors
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,19 @@ namespace Работа_с_таблицами_WinForms
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -49,18 +53,40 @@ namespace Работа_с_таблицами_WinForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.maskedTextBox2);
-            this.panel2.Controls.Add(this.maskedTextBox1);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.maskedTextBox4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.maskedTextBox3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(23, 63);
+            this.panel2.Location = new System.Drawing.Point(20, 63);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(383, 311);
-            this.panel2.TabIndex = 3;
+            this.panel2.Size = new System.Drawing.Size(383, 450);
+            this.panel2.TabIndex = 4;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.BeepOnError = true;
+            this.maskedTextBox3.Location = new System.Drawing.Point(17, 305);
+            this.maskedTextBox3.Mask = "a";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(356, 20);
+            this.maskedTextBox3.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 279);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Пол";
             // 
             // comboBox1
             // 
@@ -97,7 +123,7 @@ namespace Работа_с_таблицами_WinForms
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(17, 265);
+            this.button2.Location = new System.Drawing.Point(17, 406);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(357, 29);
             this.button2.TabIndex = 5;
@@ -105,59 +131,74 @@ namespace Работа_с_таблицами_WinForms
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 211);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Кличка";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Жокей";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Лошадь";
+            this.label2.Text = "Владелец";
             // 
-            // label1
+            // maskedTextBox4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Место";
+            this.maskedTextBox4.Location = new System.Drawing.Point(17, 368);
+            this.maskedTextBox4.Mask = "00";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(356, 20);
+            this.maskedTextBox4.TabIndex = 13;
+            this.maskedTextBox4.ValidatingType = typeof(int);
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Время заезда";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 342);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Возраст";
             // 
-            // maskedTextBox1
+            // comboBox2
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(17, 210);
-            this.maskedTextBox1.Mask = "00:00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(356, 20);
-            this.maskedTextBox1.TabIndex = 10;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(17, 165);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(356, 21);
+            this.comboBox2.TabIndex = 14;
             // 
-            // maskedTextBox2
+            // textBox1
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(17, 150);
-            this.maskedTextBox2.Mask = "00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(356, 20);
-            this.maskedTextBox2.TabIndex = 11;
-            this.maskedTextBox2.ValidatingType = typeof(int);
+            this.textBox1.Location = new System.Drawing.Point(17, 238);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(356, 20);
+            this.textBox1.TabIndex = 15;
             // 
-            // Add_res
+            // Add_hors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 382);
+            this.ClientSize = new System.Drawing.Size(426, 521);
             this.Controls.Add(this.panel2);
-            this.Name = "Add_res";
-            this.Text = "Add_res";
+            this.Name = "Add_hors";
+            this.Text = "Add_hors";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -168,14 +209,18 @@ namespace Работа_с_таблицами_WinForms
         #endregion
 
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.Label label5;
     }
 }

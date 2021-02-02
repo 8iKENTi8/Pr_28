@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_hors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_hors.Designer.cs">
+      <DependentUpon>Add_hors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add_jok.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     <Compile Include="состязание.Designer.cs">
       <DependentUpon>состязание.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add_hors.resx">
+      <DependentUpon>Add_hors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add_jok.resx">
       <DependentUpon>Add_jok.cs</DependentUpon>
     </EmbeddedResource>
