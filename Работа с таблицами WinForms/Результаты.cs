@@ -80,6 +80,80 @@ namespace Работа_с_таблицами_WinForms
             ReloadDB();
         }
 
-        
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 4)
+                {
+                    string task = table.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    if (task == "Update")
+                    {
+                        if (MessageBox.Show("Обновить эту строку",
+                            "Обновление", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int rowIndex = e.RowIndex;
+
+                            DB db = new DB();
+                            MySqlCommand command = new MySqlCommand("UPDATE `резултаты` SET `id_r` = @ul," +
+                                " `id_l` = @lg, `Место` = @ps, `Время_заезда` = @em " +
+                                "WHERE `резултаты`.`id_r` = @ul", db.getConnection());
+
+                            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
+                            command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
+                            command.Parameters.Add("@ps", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
+                            command.Parameters.Add("@em", MySqlDbType.VarChar).Value = table[3, rowIndex].Value.ToString();
+
+                            db.openConnection();
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Обновлен"); }
+
+                            db.closeConnection();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Ошибка!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            try
+            {
+                if (e.ColumnIndex == 5)
+                {
+                    string task = table.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    if (task == "Delete")
+                    {
+                        if (MessageBox.Show("Удалить эту строку",
+                            "Удаление", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int rowIndex = e.RowIndex;
+
+                            DB db = new DB();
+                            MySqlCommand command = new MySqlCommand("DELETE FROM `резултаты`" +
+                                " WHERE `резултаты`.`id_r` = @ul ", db.getConnection());
+                            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
+
+                            table.Rows.RemoveAt(rowIndex);
+
+                            db.openConnection();
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Удален"); }
+
+                            db.closeConnection();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Ошибка!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

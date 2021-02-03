@@ -30,6 +30,7 @@ namespace Работа_с_таблицами_WinForms
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@ namespace Работа_с_таблицами_WinForms
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,15 @@ namespace Работа_с_таблицами_WinForms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(383, 381);
             this.panel2.TabIndex = 5;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(17, 237);
+            this.maskedTextBox1.Mask = "0000-00-00 00:00:00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(356, 20);
+            this.maskedTextBox1.TabIndex = 18;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // textBox3
             // 
@@ -159,15 +168,6 @@ namespace Работа_с_таблицами_WinForms
             this.label2.TabIndex = 1;
             this.label2.Text = "id_r";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(17, 237);
-            this.maskedTextBox1.Mask = "0000-00-00 00:00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(356, 20);
-            this.maskedTextBox1.TabIndex = 18;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
             // Add_sos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,6 +175,7 @@ namespace Работа_с_таблицами_WinForms
             this.ClientSize = new System.Drawing.Size(426, 452);
             this.Controls.Add(this.panel2);
             this.Name = "Add_sos";
+            this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Add_sos";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

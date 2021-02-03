@@ -14,13 +14,14 @@ namespace Работа_с_таблицами_WinForms
 {
     public partial class Event_time : MetroForm
     {
+        DataTable tab;
         public Event_time()
         {
             InitializeComponent();
 
             DB dB = new DB();
 
-           DataTable tab = new DataTable();
+            tab = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
@@ -39,6 +40,16 @@ namespace Работа_с_таблицами_WinForms
             this.Hide();
             Admin_Form form = new Admin_Form();
             form.Show();
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                DataView data = tab.DefaultView;
+                data.RowFilter = string.Format("Ипподром like '%{0}%'", txtSearch.Text);
+                table.DataSource = data.ToTable();
+            }
         }
     }
 }

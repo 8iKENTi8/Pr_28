@@ -154,6 +154,7 @@ namespace Работа_с_таблицами_WinForms
             new Add_us().ShowDialog();
         }
 
+        // Поиск
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)

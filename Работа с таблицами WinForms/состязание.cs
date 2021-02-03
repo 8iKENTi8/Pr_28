@@ -36,14 +36,14 @@ namespace Работа_с_таблицами_WinForms
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             MySqlCommand command =
-                new MySqlCommand("SELECT *, 'Update','Delete'" +
-                "FROM `состязания`", dB.getConnection());
+                new MySqlCommand("SELECT `состязания`.`id_s`, `состязания`.`id_r`," +
+                " `состязания`.`event_name` AS 'Название события', `состязания`.`Date_time`" +
+                " AS 'Время начала события', `состязания`.`Ипподром`," +
+                " 'Delete' FROM `состязания`", dB.getConnection());
 
             adapter.SelectCommand = command;
 
             adapter.Fill(tab);
-
-
 
             table.DataSource = tab;
 
@@ -52,15 +52,7 @@ namespace Работа_с_таблицами_WinForms
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
                 table[5, i] = linkCell;
-                table[5, i].Style.BackColor = Color.FromArgb(46, 169, 79);
-            }
-
-            for (int i = 0; i < table.Rows.Count; i++)
-            {
-                DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
-
-                table[6, i] = linkCell;
-                table[6, i].Style.BackColor = Color.Tomato;
+                table[5, i].Style.BackColor = Color.Tomato;
             }
         }
 
@@ -71,7 +63,41 @@ namespace Работа_с_таблицами_WinForms
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+            try
+            {
+                if (e.ColumnIndex == 5)
+                {
+                    string task = table.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    if (task == "Delete")
+                    {
+                        if (MessageBox.Show("Удалить эту строку",
+                            "Удаление", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int rowIndex = e.RowIndex;
 
+                            DB db = new DB();
+                            MySqlCommand command = new MySqlCommand("DELETE FROM `состязания`" +
+                                " WHERE `состязания`.`id_s` = @ul ", db.getConnection());
+                            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
+
+                            table.Rows.RemoveAt(rowIndex);
+
+                            db.openConnection();
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Удален"); }
+
+                            db.closeConnection();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Ошибка!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,6 +110,7 @@ namespace Работа_с_таблицами_WinForms
             ReloadDB();
         }
 
+        // Поиск
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -97,17 +124,10 @@ namespace Работа_с_таблицами_WinForms
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
                     table[5, i] = linkCell;
-                    table[5, i].Style.BackColor = Color.FromArgb(46, 169, 79);
-                }
-
-                for (int i = 0; i < table.Rows.Count; i++)
-                {
-                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
-
-                    table[6, i] = linkCell;
-                    table[6, i].Style.BackColor = Color.Tomato;
+                    table[5, i].Style.BackColor = Color.Tomato;
                 }
             }
+            
 
             if (txtSearch.Text == "")
             {
@@ -116,15 +136,7 @@ namespace Работа_с_таблицами_WinForms
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
                     table[5, i] = linkCell;
-                    table[5, i].Style.BackColor = Color.FromArgb(46, 169, 79);
-                }
-
-                for (int i = 0; i < table.Rows.Count; i++)
-                {
-                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
-
-                    table[6, i] = linkCell;
-                    table[6, i].Style.BackColor = Color.Tomato;
+                    table[5, i].Style.BackColor = Color.Tomato;
                 }
             }
         }

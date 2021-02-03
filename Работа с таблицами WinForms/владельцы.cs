@@ -119,8 +119,8 @@ namespace Работа_с_таблицами_WinForms
                             int rowIndex = e.RowIndex;
 
                             DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("DELETE FROM `users`" +
-                                " WHERE `users`.`id` = @ul ", db.getConnection());
+                            MySqlCommand command = new MySqlCommand("DELETE FROM `владельцы`" +
+                                " WHERE `владельцы`.`id_v` = @ul ", db.getConnection());
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
 
                             table.Rows.RemoveAt(rowIndex);

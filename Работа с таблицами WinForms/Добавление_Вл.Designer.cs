@@ -30,6 +30,7 @@ namespace Работа_с_таблицами_WinForms
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@ namespace Работа_с_таблицами_WinForms
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,16 @@ namespace Работа_с_таблицами_WinForms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(383, 334);
             this.panel2.TabIndex = 3;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BeepOnError = true;
+            this.maskedTextBox1.Location = new System.Drawing.Point(17, 242);
+            this.maskedTextBox1.Mask = "00000000000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(356, 20);
+            this.maskedTextBox1.TabIndex = 6;
+            this.maskedTextBox1.ValidatingType = typeof(int);
             // 
             // panel3
             // 
@@ -138,16 +148,6 @@ namespace Работа_с_таблицами_WinForms
             this.textBox1.Size = new System.Drawing.Size(356, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BeepOnError = true;
-            this.maskedTextBox1.Location = new System.Drawing.Point(17, 242);
-            this.maskedTextBox1.Mask = "00000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(356, 20);
-            this.maskedTextBox1.TabIndex = 6;
-            this.maskedTextBox1.ValidatingType = typeof(int);
-            // 
             // Добавление_Вл
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +155,7 @@ namespace Работа_с_таблицами_WinForms
             this.ClientSize = new System.Drawing.Size(426, 420);
             this.Controls.Add(this.panel2);
             this.Name = "Добавление_Вл";
+            this.Style = MetroFramework.MetroColorStyle.Lime;
             this.Text = "Добавление владельца";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

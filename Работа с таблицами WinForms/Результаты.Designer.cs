@@ -111,6 +111,7 @@ namespace Работа_с_таблицами_WinForms
             this.table.RowHeadersVisible = false;
             this.table.Size = new System.Drawing.Size(722, 219);
             this.table.TabIndex = 0;
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // Результаты
             // 

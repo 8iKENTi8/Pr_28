@@ -59,9 +59,8 @@ namespace Работа_с_таблицами_WinForms
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Location = new System.Drawing.Point(20, 63);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(383, 334);
+            this.panel2.Size = new System.Drawing.Size(383, 324);
             this.panel2.TabIndex = 2;
-            
             // 
             // panel3
             // 
@@ -71,7 +70,6 @@ namespace Работа_с_таблицами_WinForms
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(383, 32);
             this.panel3.TabIndex = 3;
-            
             // 
             // label6
             // 
@@ -84,7 +82,6 @@ namespace Работа_с_таблицами_WinForms
             this.label6.TabIndex = 2;
             this.label6.Text = "First name";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        
             // 
             // button2
             // 
@@ -96,7 +93,7 @@ namespace Работа_с_таблицами_WinForms
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(357, 29);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Save";
+            this.button2.Text = "Добавить";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -108,7 +105,6 @@ namespace Работа_с_таблицами_WinForms
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Email";
-          
             // 
             // textBox3
             // 
@@ -116,7 +112,6 @@ namespace Работа_с_таблицами_WinForms
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(356, 20);
             this.textBox3.TabIndex = 4;
-           
             // 
             // label3
             // 
@@ -126,7 +121,6 @@ namespace Работа_с_таблицами_WinForms
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "pass";
-           
             // 
             // textBox2
             // 
@@ -134,7 +128,6 @@ namespace Работа_с_таблицами_WinForms
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(356, 20);
             this.textBox2.TabIndex = 2;
-           
             // 
             // label2
             // 
@@ -144,7 +137,6 @@ namespace Работа_с_таблицами_WinForms
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Login";
-     
             // 
             // textBox1
             // 
@@ -152,17 +144,16 @@ namespace Работа_с_таблицами_WinForms
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(356, 20);
             this.textBox1.TabIndex = 0;
-            
             // 
             // Add_us
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 420);
+            this.ClientSize = new System.Drawing.Size(426, 394);
             this.Controls.Add(this.panel2);
             this.Name = "Add_us";
-            this.Style = MetroFramework.MetroColorStyle.Orange;
-            this.Text = "Contact";
+            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Text = "Добавление пользователя";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
