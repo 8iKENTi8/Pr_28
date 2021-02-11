@@ -1,14 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿/*
+ *  Форма: User_Form
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Предоставляет пользователю просмотр  таблиц
+ *      
+ *  Подпрограммы, используемые в данной форме:
+ *      pictureBox1_Click - переход на форму авторизации;
+ *      button2_Click - переход на интерфейс лошади;
+ *      button3_Click - переход на интерфейс жокеи;
+ *      button1_Click - переход на интерфейс результаты.
+ *      
+ *      
+ */
+
+using System;
 using MetroFramework.Forms;
-using MySql.Data.MySqlClient;
+
 
 namespace Работа_с_таблицами_WinForms
 {

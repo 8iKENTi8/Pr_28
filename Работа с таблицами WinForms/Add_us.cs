@@ -1,11 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ *  Форма: Add_us
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Предоставляет пользователю возможность добавить пользователя.
+ *      
+ *  Переменные, используемые в данной форме:
+ *             vladelec - владелец;
+ *             jokei - жокей;
+ *             name - имя;
+ *             pol - пол;
+ *             age - возраст.
+ * 
+ *  Подпрограммы, используемые в данной форме:
+ *      button2_Click - Добавление записи в бд.
+ *      
+ */
+
+using System;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
@@ -20,6 +35,7 @@ namespace Работа_с_таблицами_WinForms
             label6.Visible = false;
         }
 
+        //Добавление записи в бд
         private void button2_Click(object sender, EventArgs e)
         {
             string login = textBox1.Text.Trim(),
@@ -47,6 +63,7 @@ namespace Работа_с_таблицами_WinForms
                 return;
             }
 
+           
             DB dB = new DB();
 
             MySqlCommand command =

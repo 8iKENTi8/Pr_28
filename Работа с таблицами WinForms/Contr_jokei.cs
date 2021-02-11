@@ -1,11 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Интерфейс: Contr_jokei
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Вывод данных в таблицу и поиск по ней.
+ *      
+ * 
+ *  Подпрограммы, используемые в данной форме:
+ *      ReloadDB - Выгрузка данных в таблицу;
+ *      Contr_hourse_Load - при загрузке интерфейса выгружаем таблицу;
+ *      txtSearch_KeyPress - поиск по кличке.
+ *      
+ */
+
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 

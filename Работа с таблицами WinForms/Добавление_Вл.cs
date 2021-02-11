@@ -1,11 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ *  Форма: Добавление_Вл
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Предоставляет пользователю возможность добавить пользователя.
+ *      
+ *  Переменные, используемые в данной форме:
+ *             login - имя;
+ *             address - адрес;
+ *             phone - телефон.
+ * 
+ *  Подпрограммы, используемые в данной форме:
+ *      button2_Click - Добавление записи в бд.
+ *      
+ */
+
+using System;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
@@ -26,6 +39,7 @@ namespace Работа_с_таблицами_WinForms
                   address = textBox2.Text.Trim(),
                   phone = maskedTextBox1.Text.Trim();
 
+            //Проверки на корректность данных
             if (login.Length < 5)
             {
                 label6.Visible = true;

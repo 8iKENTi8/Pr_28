@@ -1,11 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Форма: Sign_up
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Предоставляет пользователю возможность зарегистрироваться
+ *      в систему.
+ *      
+ *  Переменные, используемые в данной форме:
+ *      login - соединение с базой данных;
+ *      pass - хранит ссылку на форму логина, используется
+ *      pass_2 отображения формы логина.
+ *      email - email
+ * 
+ *  Подпрограммы, используемые в данной форме:
+ *      bunifuCheckbox1_OnChange - принятие пользовательских соглашений;
+ *      button2_Click - переход на форму регистрации ;
+ *      label8_Click - выход;
+ *      isUserExists - проверка есть ли пользователь ;
+ *      RegUser - Занесение данных в бд ;
+ *      Reg_User - Регистрация пользователя в бд.
+ *      
+ */
+
+
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -104,13 +126,19 @@ namespace Работа_с_таблицами_WinForms
                    pass_2 = bunifuMaterialTextbox3.Text.Trim(),
                    email = bunifuMaterialTextbox4.Text.Trim().ToLower();
 
-            if (login.Length < 5)
+            if (login.Length < 5 || login.Length>20)
             {
                 MessageBox.Show("Логин введен неверно!");
                 return;
             }
 
-            if (pass.Length < 5)
+            if ( login.Contains("@") || login.Contains("."))
+            {
+                MessageBox.Show("Логин содержит некорректные символы");
+                return;
+            }
+
+            if (pass.Length < 5 && login.Length > 20)
             {
                 MessageBox.Show("Пароль введен неверно!");
                 return;

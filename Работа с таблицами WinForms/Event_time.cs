@@ -1,11 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Форма: Event_time
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Вывод данных в таблицу и поиск по ней.
+ *      
+ * 
+ *  Подпрограммы, используемые в данной форме:
+ *      Event_time - Выгрузка данных в таблицу;
+ *      button3_Click - переход на форму админ;
+ *      txtSearch_KeyPress - поиск по кличке.
+ *      
+ */
+
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;

@@ -1,11 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Форма: Add_sos
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Предоставляет пользователю возможность авторизоваться  в системе.
+ *      
+ *  Переменные, используемые в данной форме:
+ *             vladelec - владелец;
+ *             jokei - жокей;
+ *             name - имя;
+ *             pol - пол;
+ *             age - возраст.
+ * 
+ *  Подпрограммы, используемые в данной форме:
+ *      Add_sos - заполнение комбобокса результаты;
+ *      button2_Click - Добавление записи в бд.
+ *      
+ */
+
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
@@ -47,6 +64,7 @@ namespace Работа_с_таблицами_WinForms
              dat_time = maskedTextBox1.Text,
              ipodrom = textBox2.Text;
 
+            //Проверка выбран ли комбобокс
             if (string.IsNullOrEmpty(comboBox1.Text))
             {
                 label6.Visible = true;
@@ -57,10 +75,6 @@ namespace Работа_с_таблицами_WinForms
             {
 
             }
-
-            
-            
-
 
             if (ev_name.Length < 4)
             {

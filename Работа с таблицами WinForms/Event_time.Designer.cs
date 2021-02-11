@@ -111,7 +111,7 @@ namespace Работа_с_таблицами_WinForms
             this.Controls.Add(this.panel2);
             this.Name = "Event_time";
             this.Style = MetroFramework.MetroColorStyle.Lime;
-            this.Text = "Event_time";
+            this.Text = "Время проведения событий";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

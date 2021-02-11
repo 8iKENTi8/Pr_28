@@ -1,11 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Форма: Sign_up
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Предоставляет пользователю возможность авторизоваться в системе.
+ *      
+ *  Переменные, используемые в данной форме:
+ *      login - логин;
+ *      pass - пароль.
+ * 
+ *  Подпрограммы, используемые в данной форме:
+ *      Auth – процедура которая проверяет значения и при успешной проверке 
+ *      производится  авторизация, 
+ *      которая перекидывает в новую форму в зависимости от прав доступа;
+ *      button1_Click - процедура перехода на форму регистрации;
+ *      label8_Click – процедура выхода;
+ *      isUserExists - функция которая проверяет, есть ли пользователь.
+ *      
+ */
+
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 

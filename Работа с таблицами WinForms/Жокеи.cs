@@ -1,11 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Форма: Жокеи
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Просмотр , изменение и удаление данных в таблице
+ *      
+ *  Подпрограммы, используемые в данной форме:
+ *      ReloadDB - обновление таблицы;
+ *      button3_Click - переход на форму админ;
+ *      button1_Click - переход на форму добавление записи;
+ *      table_CellContentClick - обработка событий update и delete;
+ *      txtSearch_KeyPress - поиск .
+ *      
+ *      
+ */
+
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
@@ -45,8 +60,6 @@ namespace Работа_с_таблицами_WinForms
 
             adapter.Fill(tab);
 
-
-
             table.DataSource = tab;
 
             for (int i = 0; i < table.Rows.Count; i++)
@@ -75,6 +88,27 @@ namespace Работа_с_таблицами_WinForms
                     string task = table.Rows[e.RowIndex].Cells[5].Value.ToString();
                     if (task == "Update")
                     {
+                        // проверяем 1-й столбец на пустые ячейки
+
+                        if (table.Rows[e.RowIndex].Cells[1].Value.ToString().Length >25)
+                        {
+                            // заодно покрасим
+                            table[1, e.RowIndex].Style.BackColor = Color.Tomato; 
+                            MessageBox.Show("Слишком длинное значение для имени");
+                            return;
+                        }
+
+                        // проверяем 2-й столбец на пустые ячейки
+                        if (table.Rows[e.RowIndex].Cells[2].Value.ToString().Length > 25)
+                        {
+                            // заодно покрасим
+                            table[2, e.RowIndex].Style.BackColor = Color.Tomato; 
+                            MessageBox.Show("Слишком длинное значение для адреса");
+                            return;
+                        }
+
+                    
+
                         if (MessageBox.Show("Обновить эту строку",
                             "Обновление", MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question) == DialogResult.Yes)

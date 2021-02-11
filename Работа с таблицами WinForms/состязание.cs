@@ -1,11 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Форма: состязания
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Просмотр , изменение и удаление данных в таблице
+ *      
+ *  Подпрограммы, используемые в данной форме:
+ *      ReloadDB - обновление таблицы;
+ *      button3_Click - переход на форму админ;
+ *      button1_Click - переход на форму добавление записи;
+ *      table_CellContentClick - обработка события delete;
+ *      txtSearch_KeyPress - поиск .
+ *      
+ *      
+ */
+
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;

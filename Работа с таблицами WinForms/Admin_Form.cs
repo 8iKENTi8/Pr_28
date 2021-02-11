@@ -1,12 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿/*
+ *  Форма: Admin_Form
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Предоставляет админу просмотр всех таблиц
+ *      
+ *  Подпрограммы, используемые в данной форме:
+ *      button1_Click - переход на форму пользователи;
+ *      button2_Click - переход на форму владельцы;
+ *      button3_Click - переход на форму лошади;
+ *      button4_Click - переход на форму жокеи;
+ *      button5_Click - переход на форму состязания; 
+ *      button6_Click - переход на форму результаты;
+ *      button7_Click - переход на форму время проведения событий;
+ *      pictureBox1_Click - переход на форму авторизации (или выход из учетной записи);
+ *      
+ *      
+ */
+
+using System;
 using MetroFramework.Forms;
 
 namespace Работа_с_таблицами_WinForms

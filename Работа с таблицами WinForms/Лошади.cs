@@ -1,11 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Форма: Лошади
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Просмотр , изменение и удаление данных в таблице
+ *      
+ *  Подпрограммы, используемые в данной форме:
+ *      ReloadDB - обновление таблицы;
+ *      button3_Click - переход на форму админ;
+ *      button1_Click - переход на форму добавление записи;
+ *      table_CellContentClick - обработка событий update и delete;
+ *      txtSearch_KeyPress - поиск .
+ *      
+ *      
+ */
+
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
@@ -68,7 +83,80 @@ namespace Работа_с_таблицами_WinForms
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                if (e.ColumnIndex == 6)
+                {
+                    string task = table.Rows[e.RowIndex].Cells[6].Value.ToString();
+                    if (task == "Update")
+                    {
+                        if (MessageBox.Show("Обновить эту строку",
+                            "Обновление", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int rowIndex = e.RowIndex;
 
+                            DB db = new DB();
+                            MySqlCommand command = new MySqlCommand("UPDATE `лошади` SET `id_l` = @ul, `id_v` = @lg," +
+                                " `id_j` = @ad, `Кличка` = @ph, `Пол` = @ph1, " +
+                                "`Возраст` = @ph2 WHERE `лошади`.`id_l` = @ul", db.getConnection());
+
+                            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
+                            command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
+                            command.Parameters.Add("@ad", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
+                            command.Parameters.Add("@ph", MySqlDbType.VarChar).Value = table[3, rowIndex].Value.ToString();
+                            command.Parameters.Add("@ph1", MySqlDbType.VarChar).Value = table[4, rowIndex].Value.ToString();
+                            command.Parameters.Add("@ph2", MySqlDbType.VarChar).Value = table[5, rowIndex].Value.ToString();
+
+                            db.openConnection();
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Обновлен"); }
+
+                            db.closeConnection();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Ошибка!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            try
+            {
+                if (e.ColumnIndex == 7)
+                {
+                    string task = table.Rows[e.RowIndex].Cells[7].Value.ToString();
+                    if (task == "Delete")
+                    {
+                        if (MessageBox.Show("Удалить эту строку",
+                            "Удаление", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int rowIndex = e.RowIndex;
+
+                            DB db = new DB();
+                            MySqlCommand command = new MySqlCommand("DELETE FROM `лошади`" +
+                                " WHERE `лошади`.`id_l` = @ul ", db.getConnection());
+                            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
+
+                            table.Rows.RemoveAt(rowIndex);
+
+                            db.openConnection();
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Удален"); }
+
+                            db.closeConnection();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Ошибка!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void лошади_Load(object sender, EventArgs e)
@@ -86,6 +174,7 @@ namespace Работа_с_таблицами_WinForms
             ReloadDB();
         }
 
+        //Поиск
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)

@@ -1,11 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Форма: Add_hors
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Предоставляет пользователю возможность авторизоватся в системе.
+ *      
+ *  Переменные, используемые в данной форме:
+ *             vladelec - владелец;
+ *             jokei - жокей;
+ *             name - имя;
+ *             pol - пол;
+ *             age - возраст.
+ * 
+ *  Подпрограммы, используемые в данной форме:
+ *      Joke - Заполнение комбобокса для жокеев;
+ *      Add_hors - Заполнение комбобокса для владельцов;
+ *      button2_Click - Добавление записи в бд.
+ *      
+ */
+
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
@@ -14,6 +32,7 @@ namespace Работа_с_таблицами_WinForms
 {
     public partial class Add_hors : MetroForm
     {
+        // Заполнение комбобокса для жокеев
         public void Joke()
         {
             DB dB = new DB();
@@ -36,6 +55,8 @@ namespace Работа_с_таблицами_WinForms
                 comboBox2.Items.Add(tab.Rows[i][1].ToString());
             }
         }
+
+        // Заполнение комбобокса для владельцов
         public Add_hors()
         {
             InitializeComponent();
@@ -64,7 +85,7 @@ namespace Работа_с_таблицами_WinForms
             Joke();
             
         }
-
+        //Добавление записи в бд
         private void button2_Click(object sender, EventArgs e)
         {
             string vladelec = comboBox1.Text,
@@ -72,6 +93,8 @@ namespace Работа_с_таблицами_WinForms
               name = textBox1.Text,
               pol = maskedTextBox3.Text,
               age = maskedTextBox4.Text;
+
+            // Проверка выбран ли комбобокс
 
             if (string.IsNullOrEmpty(comboBox1.Text))
             {
@@ -118,6 +141,7 @@ namespace Работа_с_таблицами_WinForms
             }
 
 
+            //Добавление записи в бд
             DB dB = new DB();
 
             MySqlCommand command =

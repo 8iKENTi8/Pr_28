@@ -1,11 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ *  Форма: Владельцы
+ *  
+ *  Язык: C#
+ *  Разработал: Ролдугин Владимир Дмитриевич, ТИП - 62
+ *  Дата: 04.02.2021г
+ *  
+ *  Задание: 
+ *      Просмотр , изменение и удаление данных в таблице
+ *      
+ *  Подпрограммы, используемые в данной форме:
+ *      ReloadDB - обновление таблицы;
+ *      button3_Click - переход на форму админ;
+ *      button1_Click - переход на форму добавление записи;
+ *      table_CellContentClick - обработка событий update и delete;
+ *      txtSearch_KeyPress - поиск .
+ *      
+ *      
+ */
+
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
@@ -37,10 +53,9 @@ namespace Работа_с_таблицами_WinForms
 
             adapter.Fill(tab);
 
-
-
             table.DataSource = tab;
 
+            //Перекрашивание ячеек таблицы update и delete
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
@@ -65,8 +80,10 @@ namespace Работа_с_таблицами_WinForms
             form.Show();
         }
 
+        // Обработка событий update и delete
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             try
             {
                 if (e.ColumnIndex == 4)
@@ -74,6 +91,34 @@ namespace Работа_с_таблицами_WinForms
                     string task = table.Rows[e.RowIndex].Cells[4].Value.ToString();
                     if (task == "Update")
                     {
+                        //Проверка пустое ли значение
+                        if (table.Rows[e.RowIndex].Cells[3].Value.ToString() == "")// проверяем 4-й столбец на пустые ячейки
+                        {
+                            table[3, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                            MessageBox.Show("Не введен телефон");
+                            return;
+                        }
+
+                        //Проверка на корректность данных
+                            if (Regex.Match(table.Rows[e.RowIndex].Cells[0].Value.ToString(), @"[а-яА-Я]|[a-zA-Z]").Success)
+                        {
+                            MessageBox.Show("Может содержать только цифры");
+                            return;
+                        }
+
+                        if (Regex.Match(table.Rows[e.RowIndex].Cells[2].Value.ToString(), @"[0-9|[+]").Success)
+                        {
+                            MessageBox.Show("Может содержать только буквы");
+                            return;
+                        }
+
+                        if (Regex.Match(table.Rows[e.RowIndex].Cells[3].Value.ToString(), @"[а-яА-Я]|[a-zA-Z]").Success)
+                        {
+                            MessageBox.Show("Может содержать только цифры");
+                            return;
+                        }
+
+                        //Вопрос вы точно хотите обновить строку , да или нет?
                         if (MessageBox.Show("Обновить эту строку",
                             "Обновление", MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question) == DialogResult.Yes)
@@ -146,6 +191,7 @@ namespace Работа_с_таблицами_WinForms
             ReloadDB();
         }
 
+        //Поиск по имени
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
